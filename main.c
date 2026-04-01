@@ -1,8 +1,18 @@
 #include <stdio.h>
 
+/*Questão 1 - T(n) = 2n+1*/
+/*Questão 2 - Por quase 2, pois T(2n) = 2(2n)+1 = 4n+1 */
+
 int conta_pares(int n, int mat[][n]) {
-    /* TODO: Implemente esta função.
-     * Para verificar se um número é par, use a expressão (x % 2 == 0) */
+    int quant = 0;
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j <= i; j++){
+            if(mat[i][j]%2 == 0){
+                quant++;
+            }
+        }
+    }
+    return quant;
 }
 
 int main() {
